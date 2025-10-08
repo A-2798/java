@@ -24,13 +24,19 @@ public class Result {
         return new Result(200, "操作成功", data);
     }
 
-    //    自定义消息
-    public static Result success(String msg) {
-        return new Result(200, msg, null);
-    }
-
     //    操作失败
     public static Result error() {
         return new Result(500, "操作失败", null);
     }
+
+    //    自定义成功消息
+    public static Result success(String msg) {
+        return new Result(200, msg, null);
+    }
+
+    //    自定义失败消息
+    public static Result error(String msg) {
+        return new Result(200, msg, null);
+    }
+
 }
